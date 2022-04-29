@@ -1,0 +1,627 @@
+month_year,death_cause_clean,total_number_of_dead_and_missing
+2014-01,Drowning,13
+2014-01,Harsh environmental conditions,1
+2014-01,Mixed or unknown,11
+2014-01,Vehicle accident,1
+2014-01,Violence,2
+2014-02,Drowning,25
+2014-02,Harsh environmental conditions,1
+2014-02,Mixed or unknown,9
+2014-02,Sickness inadequate healthcare access,5
+2014-02,Violence,24
+2014-03,Accidental death,1
+2014-03,Drowning,304
+2014-03,Harsh environmental conditions,2
+2014-03,Mixed or unknown,9
+2014-03,Vehicle accident,11
+2014-03,Violence,3
+2014-04,Drowning,66
+2014-04,Harsh environmental conditions,11
+2014-04,Mixed or unknown,11
+2014-04,Vehicle accident,7
+2014-04,Violence,11
+2014-05,Accidental death,1
+2014-05,Drowning,398
+2014-05,Mixed or unknown,58
+2014-05,Vehicle accident,3
+2014-05,Violence,1
+2014-06,Drowning,329
+2014-06,Harsh environmental conditions,6
+2014-06,Mixed or unknown,20
+2014-06,Vehicle accident,53
+2014-06,Violence,4
+2014-07,Accidental death,1
+2014-07,Drowning,873
+2014-07,Harsh environmental conditions,3
+2014-07,Mixed or unknown,28
+2014-07,Vehicle accident,2
+2014-07,Violence,1
+2014-08,Drowning,648
+2014-08,Harsh environmental conditions,3
+2014-08,Mixed or unknown,133
+2014-08,Vehicle accident,2
+2014-08,Violence,2
+2014-09,Drowning,825
+2014-09,Harsh environmental conditions,1
+2014-09,Mixed or unknown,137
+2014-09,Vehicle accident,1
+2014-09,Violence,3
+2014-10,Drowning,206
+2014-10,Harsh environmental conditions,3
+2014-10,Mixed or unknown,53
+2014-10,Vehicle accident,3
+2014-10,Violence,1
+2014-11,Drowning,90
+2014-11,Harsh environmental conditions,5
+2014-11,Mixed or unknown,7
+2014-11,Vehicle accident,2
+2014-11,Violence,1
+2014-12,Drowning,77
+2014-12,Harsh environmental conditions,17
+2014-12,Mixed or unknown,787
+2014-12,Vehicle accident,2
+2015-01,Drowning,143
+2015-01,Harsh environmental conditions,31
+2015-01,Mixed or unknown,12
+2015-01,Vehicle accident,21
+2015-01,Violence,9
+2015-02,Drowning,377
+2015-02,Harsh environmental conditions,29
+2015-02,Mixed or unknown,7
+2015-02,Violence,6
+2015-03,Drowning,280
+2015-03,Harsh environmental conditions,5
+2015-03,Mixed or unknown,263
+2015-03,Sickness inadequate healthcare access,2
+2015-03,Vehicle accident,6
+2015-03,Violence,7
+2015-04,Accidental death,1
+2015-04,Drowning,1528
+2015-04,Harsh environmental conditions,2
+2015-04,Mixed or unknown,7
+2015-04,Sickness inadequate healthcare access,5
+2015-04,Vehicle accident,32
+2015-04,Violence,22
+2015-05,Drowning,88
+2015-05,Harsh environmental conditions,8
+2015-05,Mixed or unknown,128
+2015-05,Sickness inadequate healthcare access,2
+2015-05,Vehicle accident,8
+2015-05,Violence,212
+2015-06,Drowning,38
+2015-06,Harsh environmental conditions,49
+2015-06,Mixed or unknown,70
+2015-06,Sickness inadequate healthcare access,3
+2015-06,Vehicle accident,15
+2015-06,Violence,8
+2015-07,Accidental death,1
+2015-07,Drowning,212
+2015-07,Harsh environmental conditions,16
+2015-07,Mixed or unknown,47
+2015-07,Sickness inadequate healthcare access,3
+2015-07,Vehicle accident,18
+2015-07,Violence,3
+2015-08,Drowning,563
+2015-08,Harsh environmental conditions,18
+2015-08,Mixed or unknown,97
+2015-08,Sickness inadequate healthcare access,1
+2015-08,Vehicle accident,195
+2015-08,Violence,10
+2015-09,Accidental death,1
+2015-09,Drowning,348
+2015-09,Harsh environmental conditions,14
+2015-09,Mixed or unknown,46
+2015-09,Sickness inadequate healthcare access,5
+2015-09,Vehicle accident,28
+2015-09,Violence,13
+2015-10,Drowning,432
+2015-10,Harsh environmental conditions,77
+2015-10,Mixed or unknown,96
+2015-10,Sickness inadequate healthcare access,10
+2015-10,Vehicle accident,78
+2015-10,Violence,12
+2015-11,Accidental death,1
+2015-11,Drowning,106
+2015-11,Harsh environmental conditions,7
+2015-11,Mixed or unknown,57
+2015-11,Sickness inadequate healthcare access,4
+2015-11,Vehicle accident,27
+2015-11,Violence,42
+2015-12,Accidental death,6
+2015-12,Drowning,273
+2015-12,Harsh environmental conditions,14
+2015-12,Mixed or unknown,213
+2015-12,Sickness inadequate healthcare access,88
+2015-12,Vehicle accident,38
+2015-12,Violence,70
+2016-01,Drowning,453
+2016-01,Harsh environmental conditions,34
+2016-01,Mixed or unknown,40
+2016-01,Sickness inadequate healthcare access,5
+2016-01,Vehicle accident,44
+2016-01,Violence,18
+2016-02,Accidental death,5
+2016-02,Drowning,135
+2016-02,Harsh environmental conditions,69
+2016-02,Mixed or unknown,100
+2016-02,Sickness inadequate healthcare access,76
+2016-02,Vehicle accident,58
+2016-02,Violence,64
+2016-03,Accidental death,1
+2016-03,Drowning,301
+2016-03,Harsh environmental conditions,12
+2016-03,Mixed or unknown,107
+2016-03,Sickness inadequate healthcare access,47
+2016-03,Vehicle accident,73
+2016-03,Violence,34
+2016-04,Drowning,605
+2016-04,Harsh environmental conditions,8
+2016-04,Mixed or unknown,71
+2016-04,Sickness inadequate healthcare access,7
+2016-04,Vehicle accident,24
+2016-04,Violence,30
+2016-05,Drowning,1258
+2016-05,Harsh environmental conditions,8
+2016-05,Mixed or unknown,62
+2016-05,Sickness inadequate healthcare access,4
+2016-05,Vehicle accident,31
+2016-05,Violence,18
+2016-06,Accidental death,1
+2016-06,Drowning,375
+2016-06,Harsh environmental conditions,58
+2016-06,Mixed or unknown,87
+2016-06,Sickness inadequate healthcare access,4
+2016-06,Vehicle accident,63
+2016-06,Violence,51
+2016-07,Accidental death,4
+2016-07,Drowning,243
+2016-07,Harsh environmental conditions,31
+2016-07,Mixed or unknown,118
+2016-07,Sickness inadequate healthcare access,5
+2016-07,Vehicle accident,40
+2016-07,Violence,19
+2016-08,Drowning,64
+2016-08,Harsh environmental conditions,22
+2016-08,Mixed or unknown,95
+2016-08,Sickness inadequate healthcare access,9
+2016-08,Vehicle accident,26
+2016-08,Violence,31
+2016-09,Accidental death,1
+2016-09,Drowning,376
+2016-09,Harsh environmental conditions,9
+2016-09,Mixed or unknown,114
+2016-09,Sickness inadequate healthcare access,10
+2016-09,Vehicle accident,31
+2016-09,Violence,7
+2016-10,Accidental death,28
+2016-10,Drowning,245
+2016-10,Harsh environmental conditions,15
+2016-10,Mixed or unknown,278
+2016-10,Sickness inadequate healthcare access,28
+2016-10,Vehicle accident,135
+2016-10,Violence,21
+2016-11,Drowning,723
+2016-11,Harsh environmental conditions,13
+2016-11,Mixed or unknown,137
+2016-11,Sickness inadequate healthcare access,7
+2016-11,Vehicle accident,36
+2016-11,Violence,31
+2016-12,Accidental death,1
+2016-12,Drowning,275
+2016-12,Harsh environmental conditions,38
+2016-12,Mixed or unknown,304
+2016-12,Sickness inadequate healthcare access,17
+2016-12,Vehicle accident,23
+2016-12,Violence,33
+2017-01,Accidental death,2
+2017-01,Drowning,345
+2017-01,Harsh environmental conditions,29
+2017-01,Mixed or unknown,138
+2017-01,Sickness inadequate healthcare access,7
+2017-01,Vehicle accident,23
+2017-01,Violence,17
+2017-02,Drowning,274
+2017-02,Harsh environmental conditions,16
+2017-02,Mixed or unknown,56
+2017-02,Sickness inadequate healthcare access,11
+2017-02,Vehicle accident,43
+2017-02,Violence,5
+2017-03,Drowning,306
+2017-03,Harsh environmental conditions,8
+2017-03,Mixed or unknown,15
+2017-03,Sickness inadequate healthcare access,1
+2017-03,Vehicle accident,48
+2017-03,Violence,75
+2017-04,Drowning,288
+2017-04,Harsh environmental conditions,32
+2017-04,Mixed or unknown,18
+2017-04,Sickness inadequate healthcare access,3
+2017-04,Vehicle accident,18
+2017-04,Violence,25
+2017-05,Accidental death,1
+2017-05,Drowning,597
+2017-05,Harsh environmental conditions,78
+2017-05,Mixed or unknown,80
+2017-05,Sickness inadequate healthcare access,1
+2017-05,Vehicle accident,33
+2017-05,Violence,32
+2017-06,Drowning,532
+2017-06,Harsh environmental conditions,71
+2017-06,Mixed or unknown,129
+2017-06,Sickness inadequate healthcare access,11
+2017-06,Vehicle accident,46
+2017-06,Violence,43
+2017-07,Drowning,135
+2017-07,Harsh environmental conditions,97
+2017-07,Mixed or unknown,84
+2017-07,Sickness inadequate healthcare access,6
+2017-07,Vehicle accident,42
+2017-07,Violence,28
+2017-08,Drowning,215
+2017-08,Harsh environmental conditions,63
+2017-08,Mixed or unknown,81
+2017-08,Sickness inadequate healthcare access,8
+2017-08,Vehicle accident,37
+2017-08,Violence,19
+2017-09,Drowning,323
+2017-09,Harsh environmental conditions,67
+2017-09,Mixed or unknown,71
+2017-09,Sickness inadequate healthcare access,19
+2017-09,Vehicle accident,56
+2017-09,Violence,70
+2017-10,Accidental death,2
+2017-10,Drowning,295
+2017-10,Harsh environmental conditions,48
+2017-10,Mixed or unknown,93
+2017-10,Sickness inadequate healthcare access,14
+2017-10,Vehicle accident,91
+2017-10,Violence,14
+2017-11,Drowning,227
+2017-11,Harsh environmental conditions,17
+2017-11,Mixed or unknown,146
+2017-11,Sickness inadequate healthcare access,13
+2017-11,Vehicle accident,62
+2017-11,Violence,37
+2017-12,Accidental death,1
+2017-12,Drowning,40
+2017-12,Harsh environmental conditions,63
+2017-12,Mixed or unknown,153
+2017-12,Sickness inadequate healthcare access,14
+2017-12,Vehicle accident,56
+2017-12,Violence,20
+2018-01,Drowning,235
+2018-01,Harsh environmental conditions,32
+2018-01,Mixed or unknown,138
+2018-01,Sickness inadequate healthcare access,16
+2018-01,Vehicle accident,78
+2018-01,Violence,13
+2018-02,Accidental death,1
+2018-02,Drowning,242
+2018-02,Harsh environmental conditions,17
+2018-02,Mixed or unknown,62
+2018-02,Sickness inadequate healthcare access,15
+2018-02,Vehicle accident,44
+2018-02,Violence,14
+2018-03,Drowning,87
+2018-03,Harsh environmental conditions,14
+2018-03,Mixed or unknown,53
+2018-03,Sickness inadequate healthcare access,20
+2018-03,Vehicle accident,85
+2018-03,Violence,17
+2018-04,Drowning,182
+2018-04,Harsh environmental conditions,23
+2018-04,Mixed or unknown,61
+2018-04,Sickness inadequate healthcare access,15
+2018-04,Vehicle accident,37
+2018-04,Violence,19
+2018-05,Drowning,83
+2018-05,Harsh environmental conditions,20
+2018-05,Mixed or unknown,51
+2018-05,Sickness inadequate healthcare access,19
+2018-05,Vehicle accident,19
+2018-05,Violence,48
+2018-06,Accidental death,2
+2018-06,Drowning,715
+2018-06,Harsh environmental conditions,21
+2018-06,Mixed or unknown,83
+2018-06,Sickness inadequate healthcare access,27
+2018-06,Vehicle accident,54
+2018-06,Violence,27
+2018-07,Accidental death,7
+2018-07,Drowning,268
+2018-07,Harsh environmental conditions,24
+2018-07,Mixed or unknown,59
+2018-07,Sickness inadequate healthcare access,25
+2018-07,Vehicle accident,28
+2018-07,Violence,34
+2018-08,Accidental death,2
+2018-08,Drowning,193
+2018-08,Harsh environmental conditions,23
+2018-08,Mixed or unknown,106
+2018-08,Sickness inadequate healthcare access,15
+2018-08,Vehicle accident,36
+2018-08,Violence,22
+2018-09,Accidental death,1
+2018-09,Drowning,246
+2018-09,Harsh environmental conditions,35
+2018-09,Mixed or unknown,73
+2018-09,Sickness inadequate healthcare access,27
+2018-09,Vehicle accident,39
+2018-09,Violence,28
+2018-10,Accidental death,2
+2018-10,Drowning,218
+2018-10,Harsh environmental conditions,10
+2018-10,Mixed or unknown,84
+2018-10,Sickness inadequate healthcare access,30
+2018-10,Vehicle accident,80
+2018-10,Violence,28
+2018-11,Drowning,149
+2018-11,Harsh environmental conditions,9
+2018-11,Mixed or unknown,69
+2018-11,Sickness inadequate healthcare access,22
+2018-11,Vehicle accident,52
+2018-11,Violence,12
+2018-12,Drowning,129
+2018-12,Harsh environmental conditions,5
+2018-12,Mixed or unknown,46
+2018-12,Sickness inadequate healthcare access,19
+2018-12,Vehicle accident,37
+2018-12,Violence,6
+2019-01,Accidental death,1
+2019-01,Drowning,316
+2019-01,Harsh environmental conditions,35
+2019-01,Mixed or unknown,67
+2019-01,Sickness inadequate healthcare access,23
+2019-01,Vehicle accident,34
+2019-01,Violence,29
+2019-02,Accidental death,1
+2019-02,Drowning,76
+2019-02,Harsh environmental conditions,13
+2019-02,Mixed or unknown,93
+2019-02,Sickness inadequate healthcare access,18
+2019-02,Vehicle accident,45
+2019-02,Violence,21
+2019-03,Accidental death,5
+2019-03,Drowning,164
+2019-03,Harsh environmental conditions,21
+2019-03,Mixed or unknown,50
+2019-03,Sickness inadequate healthcare access,48
+2019-03,Vehicle accident,80
+2019-03,Violence,18
+2019-04,Accidental death,2
+2019-04,Drowning,131
+2019-04,Harsh environmental conditions,13
+2019-04,Mixed or unknown,101
+2019-04,Sickness inadequate healthcare access,15
+2019-04,Vehicle accident,86
+2019-04,Violence,54
+2019-05,Accidental death,3
+2019-05,Drowning,173
+2019-05,Harsh environmental conditions,51
+2019-05,Mixed or unknown,110
+2019-05,Sickness inadequate healthcare access,16
+2019-05,Vehicle accident,33
+2019-05,Violence,33
+2019-06,Drowning,175
+2019-06,Harsh environmental conditions,20
+2019-06,Mixed or unknown,82
+2019-06,Sickness inadequate healthcare access,23
+2019-06,Vehicle accident,42
+2019-06,Violence,27
+2019-07,Drowning,239
+2019-07,Harsh environmental conditions,110
+2019-07,Mixed or unknown,105
+2019-07,Sickness inadequate healthcare access,28
+2019-07,Vehicle accident,67
+2019-07,Violence,37
+2019-08,Drowning,200
+2019-08,Harsh environmental conditions,26
+2019-08,Mixed or unknown,94
+2019-08,Sickness inadequate healthcare access,16
+2019-08,Vehicle accident,52
+2019-08,Violence,34
+2019-09,Accidental death,1
+2019-09,Drowning,157
+2019-09,Harsh environmental conditions,14
+2019-09,Mixed or unknown,92
+2019-09,Sickness inadequate healthcare access,19
+2019-09,Vehicle accident,36
+2019-09,Violence,13
+2019-10,Accidental death,4
+2019-10,Drowning,123
+2019-10,Harsh environmental conditions,38
+2019-10,Mixed or unknown,105
+2019-10,Sickness inadequate healthcare access,30
+2019-10,Vehicle accident,79
+2019-10,Violence,21
+2019-11,Drowning,399
+2019-11,Harsh environmental conditions,16
+2019-11,Mixed or unknown,112
+2019-11,Sickness inadequate healthcare access,29
+2019-11,Vehicle accident,86
+2019-11,Violence,57
+2019-12,Accidental death,3
+2019-12,Drowning,259
+2019-12,Harsh environmental conditions,13
+2019-12,Mixed or unknown,225
+2019-12,Sickness inadequate healthcare access,29
+2019-12,Vehicle accident,26
+2019-12,Violence,39
+2020-01,Accidental death,28
+2020-01,Drowning,183
+2020-01,Harsh environmental conditions,3
+2020-01,Mixed or unknown,67
+2020-01,Sickness inadequate healthcare access,15
+2020-01,Vehicle accident,40
+2020-01,Violence,16
+2020-02,Accidental death,16
+2020-02,Drowning,212
+2020-02,Harsh environmental conditions,20
+2020-02,Mixed or unknown,35
+2020-02,Sickness inadequate healthcare access,3
+2020-02,Vehicle accident,18
+2020-02,Violence,5
+2020-03,Accidental death,70
+2020-03,Drowning,130
+2020-03,Harsh environmental conditions,2
+2020-03,Mixed or unknown,18
+2020-03,Sickness inadequate healthcare access,2
+2020-03,Vehicle accident,8
+2020-03,Violence,10
+2020-04,Accidental death,6
+2020-04,Drowning,69
+2020-04,Harsh environmental conditions,1
+2020-04,Mixed or unknown,96
+2020-04,Sickness inadequate healthcare access,7
+2020-04,Vehicle accident,10
+2020-04,Violence,1
+2020-05,Accidental death,6
+2020-05,Drowning,33
+2020-05,Harsh environmental conditions,2
+2020-05,Mixed or unknown,14
+2020-05,Sickness inadequate healthcare access,3
+2020-05,Vehicle accident,7
+2020-05,Violence,57
+2020-06,Accidental death,9
+2020-06,Drowning,186
+2020-06,Harsh environmental conditions,15
+2020-06,Mixed or unknown,61
+2020-06,Sickness inadequate healthcare access,6
+2020-06,Vehicle accident,30
+2020-06,Violence,7
+2020-07,Accidental death,24
+2020-07,Drowning,222
+2020-07,Harsh environmental conditions,39
+2020-07,Mixed or unknown,24
+2020-07,Sickness inadequate healthcare access,5
+2020-07,Vehicle accident,2
+2020-07,Violence,9
+2020-08,Accidental death,28
+2020-08,Drowning,237
+2020-08,Harsh environmental conditions,57
+2020-08,Mixed or unknown,13
+2020-08,Sickness inadequate healthcare access,4
+2020-08,Vehicle accident,23
+2020-08,Violence,8
+2020-09,Accidental death,37
+2020-09,Drowning,346
+2020-09,Harsh environmental conditions,36
+2020-09,Mixed or unknown,34
+2020-09,Sickness inadequate healthcare access,38
+2020-09,Vehicle accident,10
+2020-09,Violence,9
+2020-10,Accidental death,26
+2020-10,Drowning,454
+2020-10,Harsh environmental conditions,96
+2020-10,Mixed or unknown,41
+2020-10,Sickness inadequate healthcare access,8
+2020-10,Vehicle accident,10
+2020-10,Violence,25
+2020-11,Accidental death,30
+2020-11,Drowning,406
+2020-11,Harsh environmental conditions,13
+2020-11,Mixed or unknown,20
+2020-11,Sickness inadequate healthcare access,3
+2020-11,Vehicle accident,8
+2020-11,Violence,5
+2020-12,Accidental death,21
+2020-12,Drowning,281
+2020-12,Harsh environmental conditions,27
+2020-12,Mixed or unknown,17
+2020-12,Sickness inadequate healthcare access,3
+2020-12,Vehicle accident,10
+2020-12,Violence,4
+2021-01,Drowning,156
+2021-01,Harsh environmental conditions,23
+2021-01,Mixed or unknown,21
+2021-01,Sickness inadequate healthcare access,1
+2021-01,Vehicle accident,24
+2021-01,Violence,27
+2021-02,Accidental death,5
+2021-02,Drowning,175
+2021-02,Harsh environmental conditions,40
+2021-02,Mixed or unknown,16
+2021-02,Sickness inadequate healthcare access,7
+2021-02,Vehicle accident,54
+2021-02,Violence,17
+2021-03,Accidental death,4
+2021-03,Drowning,214
+2021-03,Harsh environmental conditions,27
+2021-03,Mixed or unknown,53
+2021-03,Sickness inadequate healthcare access,8
+2021-03,Vehicle accident,64
+2021-03,Violence,19
+2021-04,Accidental death,5
+2021-04,Drowning,329
+2021-04,Harsh environmental conditions,91
+2021-04,Mixed or unknown,14
+2021-04,Sickness inadequate healthcare access,13
+2021-04,Vehicle accident,42
+2021-04,Violence,19
+2021-05,Accidental death,2
+2021-05,Drowning,276
+2021-05,Harsh environmental conditions,17
+2021-05,Mixed or unknown,45
+2021-05,Sickness inadequate healthcare access,10
+2021-05,Vehicle accident,19
+2021-05,Violence,9
+2021-06,Accidental death,10
+2021-06,Drowning,559
+2021-06,Harsh environmental conditions,80
+2021-06,Mixed or unknown,41
+2021-06,Sickness inadequate healthcare access,31
+2021-06,Vehicle accident,32
+2021-06,Violence,23
+2021-07,Accidental death,10
+2021-07,Drowning,359
+2021-07,Harsh environmental conditions,42
+2021-07,Mixed or unknown,26
+2021-07,Sickness inadequate healthcare access,11
+2021-07,Vehicle accident,40
+2021-07,Violence,12
+2021-08,Accidental death,6
+2021-08,Drowning,403
+2021-08,Harsh environmental conditions,194
+2021-08,Mixed or unknown,76
+2021-08,Sickness inadequate healthcare access,9
+2021-08,Vehicle accident,52
+2021-08,Violence,189
+2021-09,Accidental death,14
+2021-09,Drowning,118
+2021-09,Harsh environmental conditions,100
+2021-09,Mixed or unknown,24
+2021-09,Sickness inadequate healthcare access,15
+2021-09,Vehicle accident,54
+2021-09,Violence,16
+2021-10,Accidental death,5
+2021-10,Drowning,182
+2021-10,Harsh environmental conditions,31
+2021-10,Mixed or unknown,64
+2021-10,Sickness inadequate healthcare access,14
+2021-10,Vehicle accident,58
+2021-10,Violence,23
+2021-11,Accidental death,17
+2021-11,Drowning,165
+2021-11,Harsh environmental conditions,35
+2021-11,Mixed or unknown,35
+2021-11,Sickness inadequate healthcare access,13
+2021-11,Vehicle accident,67
+2021-11,Violence,15
+2021-12,Accidental death,8
+2021-12,Drowning,610
+2021-12,Harsh environmental conditions,12
+2021-12,Mixed or unknown,16
+2021-12,Sickness inadequate healthcare access,7
+2021-12,Vehicle accident,99
+2021-12,Violence,27
+2022-01,Drowning,289
+2022-01,Harsh environmental conditions,21
+2022-01,Mixed or unknown,12
+2022-01,Sickness inadequate healthcare access,3
+2022-01,Vehicle accident,17
+2022-01,Violence,5
+2022-02,Drowning,54
+2022-02,Harsh environmental conditions,21
+2022-02,Sickness inadequate healthcare access,1
+2022-02,Vehicle accident,13
+2022-02,Violence,5
