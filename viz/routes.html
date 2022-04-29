@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;400;700&display=swap" rel="stylesheet">
+    <title>Migrants viz</title>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://labratrevenge.com/d3-tip/javascripts/d3.tip.min.js"></script>
+
+    <style type="text/css">
+        body {
+            font-family: 'Roboto', sans-serif;
+            font: 11px sans-serif;
+        }
+
+        .container {
+            margin: auto;
+            max-width: 900px;
+            /* min-width: 440px; */
+            border-left: 1px solid black;
+            border-bottom: 14pt solid black;
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+            box-shadow: 5px 5px 10px gainsboro;
+        }
+
+        .text {
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 20px;
+        }
+
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 24px;
+        }
+
+        h3 {
+            font-size: 14px;
+            font-weight: 200;
+            line-height: 22px;
+            text-transform: uppercase;
+        }
+
+        h4 {
+            line-height: 28px;
+        }
+
+        span {
+            color: #990000;
+        }
+
+        #chart {
+            text-align: center;
+        }
+
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: #000;
+            shape-rendering: crispEdges;
+        }
+
+        .bar:hover {
+            fill: #990000;
+        }
+
+        .x.axis path {
+            display: none;
+        }
+
+        .d3-tip {
+            line-height: 1;
+            font-weight: bold;
+            padding: 12px;
+            background: #0a0a0a;
+            color: #efefef;
+            border-radius: 2px;
+        }
+
+        .d3-tip:after {
+            box-sizing: border-box;
+            display: inline;
+            font-size: 10px;
+            width: 100%;
+            line-height: 1;
+            color: #0a0a0a;
+            content: "\25BC";
+            position: absolute;
+            text-align: center;
+        }
+
+        .d3-tip.n:after {
+            margin: -1px 0 0 0;
+            top: 100%;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="text">
+            <h1>Most migrants who went missing were crossing the <span>Central Mediterranean</span></h1>
+            <h3>BY AADIT TAMBE</h3>
+            <h2>Since 2014, at least <span><strong>22,942</strong></span> people have lost their lives during unsafe
+                migration
+                journeys across
+                the Mediterranean,
+                according to data collected by the Missing Migrants Project. These charts show how many
+                people have <span>disappeared</span> — or died due to transportation accidents, shipwrecks, violent
+                attacks,
+                or medical complications during their journeys — along the six most dangerous migratory routes each
+                year.
+            </h2>
+        </div>
+        <div id="chart"></div>
+        <div class="text">
+            <h3>SOURCE: <a href="https://missingmigrants.iom.int/">MISSING MIGRANTS PROJECT</a>. NOTE: data from 2014 to
+                2021.</h3>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var clientWidth = document.getElementById('chart').clientWidth;
+        if (clientWidth > 500) {
+            clientWidth = 450
+        }
+        var margin = { top: 0, right: 20, bottom: 50, left: 20 },
+            width = clientWidth - margin.left - margin.right,
+            height = 250 - margin.top - margin.bottom;
+
+        var formatPercent = d3.format(".0%");
+
+        var color = d3.scale.linear()
+            .range(["#2ec4b6", "#fbd603"])
+            .domain([0, 4574]);
+
+        var x = d3.scale.ordinal()
+            .rangeRoundBands([0, width], .1);
+
+        var y = d3.scale.linear()
+            .range([height, 0]);
+
+        // console.log(height)
+        var xAxis = d3.svg.axis()
+            .scale(x)
+            .orient("bottom");
+
+        var yAxis = d3.svg.axis()
+            .scale(y)
+            .orient("left")
+            .tickFormat(function (d, i) {
+                // console.log(d * 3)
+                return (d * 1.5)
+                // console.log(d)
+            });
+
+        var tip = d3.tip()
+            .attr('class', 'd3-tip')
+            .offset([-10, 0])
+            .html(function (d) {
+                return "<strong>" + d.migration_route + ": " + d.incident_year + ", </strong><br/><span style='color:#fff'>" + d.total_number_of_dead_and_missing + " migrants disappeared</span>";
+            })
+
+
+        d3.csv("../data/year_and_route.csv", type, function (data) {
+
+            var migration_route = d3.nest()
+                .key(function (d) {
+                    // console.log(d)
+                    return d.migration_route;
+                })
+                .entries(data);
+
+
+            x.domain(data.map(function (d) { return d.incident_year; }));
+            y.domain([0, d3.max(migration_route, function (s) {
+                // console.log(s.values)
+                return s.values[0].total_number_of_dead_and_missing;
+            })]);
+
+
+            var svg = d3.select("#chart").selectAll("svg")
+                .data(migration_route)
+                .enter()
+                .append("svg:svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+            svg.append("g")
+                .attr("class", "x axis")
+                .attr("transform", "translate(0," + height + ")")
+                .call(xAxis);
+
+            svg.append("g")
+                .attr("class", "y axis")
+                // .call(yAxis)
+                .append("text")
+                .attr("x", width / 2)
+                .attr("y", height + 30)
+                .attr("dy", ".71em")
+                .attr("text-anchor", "middle")
+                .attr("font-size", "1.1em")
+                .text(function (d) { return d.key });
+
+
+            svg.selectAll(".bar")
+                .data(function (d) {
+                    // console.log(d) 
+                    return d.values;
+                })
+                .enter()
+                .append("rect")
+                .attr("class", "bar")
+                .attr("x", function (d) { return x(d.incident_year); })
+                .attr("width", x.rangeBand())
+                .attr("y", function (d) { return y(d.total_number_of_dead_and_missing / 1.5); })
+                .attr("height", function (d) {
+                    return height - y(d.total_number_of_dead_and_missing / 1.5);
+                })
+                .attr("fill", function (d) { return color(d.total_number_of_dead_and_missing) })
+                .on('mouseover', tip.show)
+                .on('mouseout', tip.hide)
+
+            svg.call(tip);
+
+        });
+
+        function type(d) {
+            d.total_number_of_dead_and_missing = +d.total_number_of_dead_and_missing;
+            return d;
+        }
+
+    // Thank you to the following sources:
+    // - D3 Bar Chart Small Multiple - https://observablehq.com/@eliaslevy/d3-bar-chart
+    // - Small multiple bar charts with tooltips - http://bl.ocks.org/officeofjane/7315455
+    // - Using d3 - tip to add tooltips to a d3 bar chart - http://bl.ocks.org/Caged/6476579
+
+    </script>
+</body>
+
+</html>
