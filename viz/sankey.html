@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;400;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<title>Sankey!</title>
+
+<style>
+    body {
+        align-items: center;
+        font-family: 'roboto';
+        color: #0a0a0a;
+    }
+
+    .container {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin: auto;
+        max-width: 900px;
+        /* min-width: 440px; */
+        border-left: 1px solid black;
+        border-bottom: 14pt solid black;
+        border-top: 1px solid black;
+        border-right: 1px solid black;
+        box-shadow: 5px 5px 10px gainsboro;
+    }
+
+    .columns {
+        Width: 100%;
+    }
+
+    .column {
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding-bottom: 20px;
+        padding-top: 30px;
+    }
+
+    h1 span {
+        color: #990000;
+    }
+
+    h2 {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px;
+        padding-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 14px;
+        font-weight: 200;
+        line-height: 22px;
+        text-transform: uppercase;
+        padding-bottom: 15px;
+    }
+
+    #titleInfo {
+        padding-top: 20px;
+    }
+
+    #removeOnHover {
+        color: #990000;
+        font-style: italic;
+    }
+
+    #selectionTitle {
+        color: #990000;
+    }
+
+    #chart {
+        text-align: center;
+    }
+
+    @media (min-width: 600px) {
+        .column {
+            width: 50%;
+            float: left;
+        }
+
+        .columns {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    }
+
+    .node rect {
+        cursor: move;
+    }
+
+    .node text {
+        pointer-events: none;
+        color: #0a0a0a;
+    }
+
+    .link {
+        fill: none;
+    }
+</style>
+
+
+<body>
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <div id="chart"></div>
+            </div>
+            <div class="column">
+                <h1>Most migrants have gone missing in the <span>Mediterranean</span> since 2014, as a result of
+                    <span>drowning</span>.
+                </h1>
+                <h3>By Aadit tambe</h3>
+                <h2>This Sankey diagram shows the relationship between locations and causes of migrants dying or
+                    disappearing. <br> Mediterranean Sea is where irregular migration to
+                    Europe
+                    is most visible, according to an analysis by the Missing Migrants Project.</h2>
+                <h3>Source: <a href="https://missingmigrants.iom.int/">Missing Migrants Project</a></h3>
+                <div id="titleInfo">
+                    <h2 id="removeOnHover">Hover over a link for more information.</h2>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+
+        <script src="sankey.js"></script>
+        <script>
+            var clientWidth = document.getElementById('chart').clientWidth;
+            // console.log(clientWidth);
+
+            var infoText = {
+                "Drowning": "Since 2014, at least 29,256 migrants are recorded to either have disappeared or died because of drowning.",
+                "Violence": "Since 2014, at least 2,480 migrants are recorded to either have disappeared or died because of violence.",
+                "Mixed": "Since 2014, at least 7,972 migrants are recorded to either have disappeared or died because of mixed or unknown reasons.",
+                "Harsh": "Since 2014, at least 2,790 migrants are recorded to either have disappeared or died due to harsh environmental conditions or due to a lack of adequate shelter, food, water.",
+                "Vehicle": "Since 2014, at least of 3,909 migrants are recorded to either have disappeared or died in vehicle accidents or accidents linked to hazardous transport.",
+                "Sikness": "Since 2014, at least 1,307 migrants are recorded to either have disappeared or died due to sickness or a lack of access to adequate healthcare.",
+                "Accidental": "Since 2014, at least 516 migrants are recorded to either have disappeared or died as a result of an accident."
+            }
+
+            var units = " people";
+
+            var margin = { top: 10, right: 10, bottom: 10, left: 10 },
+                width = clientWidth - margin.left - margin.right,
+                height = 700 - margin.top - margin.bottom;
+
+            var formatNumber = d3.format(",.0f"),    // zero decimal places
+                format = function (d) { return formatNumber(d) + " " + units; },
+                color = d3.scale.category20c();
+
+            var svg = d3.select("#chart").append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                .attr("transform",
+                    "translate(" + margin.left + "," + margin.top + ")");
+
+            var sankey = d3.sankey()
+                .nodeWidth(36)
+                .nodePadding(40)
+                .size([width, height]);
+
+            var path = sankey.link();
+
+            d3.csv("../data/region_and_cause.csv", function (error, data) {
+
+                graph = { "nodes": [], "links": [] };
+
+                data.forEach(function (d) {
+                    graph.nodes.push({ "name": d.source });
+                    graph.nodes.push({ "name": d.target });
+                    graph.links.push({
+                        "source": d.source,
+                        "target": d.target,
+                        "value": +d.value
+                    });
+                });
+
+                graph.nodes = d3.keys(d3.nest()
+                    .key(function (d) { return d.name; })
+                    .map(graph.nodes));
+
+                graph.links.forEach(function (d, i) {
+                    graph.links[i].source = graph.nodes.indexOf(graph.links[i].source);
+                    graph.links[i].target = graph.nodes.indexOf(graph.links[i].target);
+                });
+
+                graph.nodes.forEach(function (d, i) {
+                    graph.nodes[i] = { "name": d };
+                });
+
+                sankey
+                    .nodes(graph.nodes)
+                    .links(graph.links)
+                    .layout(32);
+
+                var link = svg.append("g").selectAll(".link")
+                    .data(graph.links)
+                    .enter().append("path")
+                    .attr("class", "link")
+                    .attr("d", path)
+                    .style("stroke-width", function (d) {
+                        // console.log(d)
+                        return Math.max(1, d.dy);
+                    })
+                    .sort(function (a, b) { return b.dy - a.dy; })
+                    .style("stroke", function (d) {
+                        if (d.target.name == "Drowning") {
+                            return "#fbd603"
+                        } else {
+                            return "#dadada"
+                        }
+                    })
+                    .on("mouseover", function (d) {
+                        var textsource = d.source.name;
+                        var texttarget = d.target.name;
+                        var textvalue = d.value
+                        // console.log(d)
+                        d3.select("#titleInfo")
+                            .append("h2")
+                            .attr("id", "selectionTitle")
+                            .text(function (d) {
+                                // console.log(d)
+                                return textsource + " → " +
+                                    texttarget + ": " + format(textvalue);
+                            })
+                        d3.select("#titleInfo")
+                            .append("p")
+                            .attr("id", "selectionBody")
+                            .text(function (d) {
+                                console.log(texttarget)
+                                if (texttarget == "Drowning") {
+                                    // console.log('drowning')
+                                    return infoText.Drowning
+                                } else if (texttarget == "Mixed or unknown") {
+                                    return infoText.Mixed
+                                } else if (texttarget == "Violence") {
+                                    return infoText.Violence
+                                } else if (texttarget == "Harsh environmental conditions") {
+                                    return infoText.Harsh
+                                } else if (texttarget == "Vehicle accident") {
+                                    return infoText.Vehicle
+                                } else if (texttarget == "Sickness inadequate healthcare access") {
+                                    return infoText.Sickness
+                                } else if (texttarget == "Accidental death") {
+                                    return infoText.Accidental
+                                }
+                            })
+                        d3.select("#removeOnHover")
+                            .style("display", "none")
+                        d3.select(this)
+                            .style("stroke", "#990000")
+                    })
+                    .on("mouseout", function (d) {
+                        d3.select("#titleInfo")
+                            .select("#selectionTitle")
+                            .remove();
+                        d3.select("#titleInfo")
+                            .select("#selectionBody")
+                            .remove()
+                        d3.select("#removeOnHover")
+                            .style("display", "block")
+                        d3.select(this)
+                            .style("stroke", function (d) {
+                                if (d.target.name == "Drowning") {
+                                    return "#fbd603"
+                                } else {
+                                    return "#dadada"
+                                }
+                                // return "blue"
+                            })
+                    });
+
+                link.append("title")
+                    .text(function (d) {
+                        // console.log(d.source.name)
+                        return d.source.name + " → " +
+                            d.target.name + "\n" + format(d.value);
+                    })
+
+                var node = svg.append("g").selectAll(".node")
+                    .data(graph.nodes)
+                    .enter().append("g")
+                    .attr("class", "node")
+                    .attr("transform", function (d) {
+                        return "translate(" + d.x + "," + d.y + ")";
+                    })
+                    .call(d3.behavior.drag()
+                        .origin(function (d) { return d; })
+                        .on("dragstart", function () {
+                            this.parentNode.appendChild(this);
+                        })
+                        .on("drag", dragmove));
+
+                node.append("rect")
+                    .attr("height", function (d) { return d.dy; })
+                    .attr("width", sankey.nodeWidth())
+                    .style("fill", function (d) {
+                        return "#666666"
+                    })
+                    .style("stroke", function (d) {
+                        return d3.rgb(d.color).darker(2);
+                    })
+                    .append("title")
+                    .text(function (d) {
+                        return d.name + "\n" + format(d.value);
+                    })
+
+                node.append("text")
+                    .attr("x", -6)
+                    .attr("y", function (d) { return d.dy / 2; })
+                    .attr("dy", ".35em")
+                    .attr("text-anchor", "end")
+                    .attr("transform", null)
+                    .text(function (d) { return d.name; })
+                    .filter(function (d) { return d.x < width / 2; })
+                    .attr("x", 6 + sankey.nodeWidth())
+                    .attr("text-anchor", "start");
+
+                function dragmove(d) {
+                    d3.select(this).attr("transform",
+                        "translate(" + d.x + "," + (
+                            d.y = Math.max(0, Math.min(height - d.dy, d3.event.y))
+                        ) + ")");
+                    sankey.relayout();
+                    link.attr("d", path);
+                }
+            });
+        // Thank you to the following resources:
+        // - https://bl.ocks.org/d3noob/06e72deea99e7b4859841f305f63ba85
+        // - https://github.com/d3/d3-sankey
+        // - https://blog.scottlogic.com/2017/04/05/interactive-responsive-small-multiples.html
+        </script>
+
+</body>
+
+</html>
