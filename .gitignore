@@ -1,1 +1,10 @@
 /app/node_modules
+
+/app/src
+/app/build
+
+/analysis/.ipynb_checkpoints
+
+/analysis/.DS_Store
+
+.DS_Store
