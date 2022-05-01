@@ -8,17 +8,6 @@ module.exports = function (grunt) {
             t1: {
                 files: [
                     {
-                        src: 'src/a.js',
-                        dest: 'build/a.min.js',
-                    }
-                ]
-            },
-            t2: {
-                // options:{
-                //     banner: 'const b = "in t2 only"'
-                // },
-                files: [
-                    {
                         src: 'src/js/*js',
                         dest: 'build/js/script.min.js'
                     }
@@ -100,7 +89,6 @@ module.exports = function (grunt) {
     });
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.registerTask('compressJS', 'uglify');
-    grunt.registerTask('compressABC', 'uglify:t2');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-sass');
