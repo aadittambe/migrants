@@ -7,16 +7,16 @@ Caribbean,Violence,8
 Central America,Accidental death,12
 Central America,Drowning,548
 Central America,Harsh environmental conditions,44
+Central America,Inadequate healthcare access,59
 Central America,Mixed or unknown,287
-Central America,Sickness inadequate healthcare access,59
 Central America,Vehicle accident,437
 Central America,Violence,164
 Central Asia,Vehicle accident,52
 Eastern Africa,Accidental death,66
 Eastern Africa,Drowning,1000
 Eastern Africa,Harsh environmental conditions,79
+Eastern Africa,Inadequate healthcare access,89
 Eastern Africa,Mixed or unknown,234
-Eastern Africa,Sickness inadequate healthcare access,89
 Eastern Africa,Vehicle accident,196
 Eastern Africa,Violence,145
 Eastern Asia,Accidental death,1
@@ -26,49 +26,49 @@ Eastern Asia,Violence,1
 Europe,Accidental death,22
 Europe,Drowning,187
 Europe,Harsh environmental conditions,48
+Europe,Inadequate healthcare access,19
 Europe,Mixed or unknown,39
-Europe,Sickness inadequate healthcare access,19
 Europe,Vehicle accident,419
 Europe,Violence,45
 Mediterranean,Accidental death,46
 Mediterranean,Drowning,21726
 Mediterranean,Harsh environmental conditions,262
+Mediterranean,Inadequate healthcare access,18
 Mediterranean,Mixed or unknown,1100
-Mediterranean,Sickness inadequate healthcare access,18
 Mediterranean,Vehicle accident,284
 Mediterranean,Violence,53
 Middle Africa,Drowning,51
 Middle Africa,Harsh environmental conditions,25
+Middle Africa,Inadequate healthcare access,13
 Middle Africa,Mixed or unknown,32
-Middle Africa,Sickness inadequate healthcare access,13
 Middle Africa,Vehicle accident,47
 Middle Africa,Violence,13
 North America,Accidental death,32
 North America,Drowning,287
 North America,Harsh environmental conditions,510
+North America,Inadequate healthcare access,37
 North America,Mixed or unknown,2019
-North America,Sickness inadequate healthcare access,37
 North America,Vehicle accident,150
 North America,Violence,62
 Northern Africa,Accidental death,2
 Northern Africa,Drowning,1565
 Northern Africa,Harsh environmental conditions,1229
+Northern Africa,Inadequate healthcare access,486
 Northern Africa,Mixed or unknown,1981
-Northern Africa,Sickness inadequate healthcare access,486
 Northern Africa,Vehicle accident,802
 Northern Africa,Violence,663
 South America,Accidental death,8
 South America,Drowning,168
 South America,Harsh environmental conditions,28
+South America,Inadequate healthcare access,27
 South America,Mixed or unknown,43
-South America,Sickness inadequate healthcare access,27
 South America,Vehicle accident,56
 South America,Violence,57
 South-eastern Asia,Accidental death,1
 South-eastern Asia,Drowning,1032
 South-eastern Asia,Harsh environmental conditions,14
+South-eastern Asia,Inadequate healthcare access,14
 South-eastern Asia,Mixed or unknown,1400
-South-eastern Asia,Sickness inadequate healthcare access,14
 South-eastern Asia,Vehicle accident,174
 South-eastern Asia,Violence,235
 Southern Africa,Accidental death,6
@@ -79,21 +79,21 @@ Southern Africa,Violence,1
 Southern Asia,Accidental death,279
 Southern Asia,Drowning,41
 Southern Asia,Harsh environmental conditions,51
+Southern Asia,Inadequate healthcare access,135
 Southern Asia,Mixed or unknown,183
-Southern Asia,Sickness inadequate healthcare access,135
 Southern Asia,Vehicle accident,500
 Southern Asia,Violence,405
 Western Africa,Accidental death,1
 Western Africa,Drowning,478
 Western Africa,Harsh environmental conditions,454
+Western Africa,Inadequate healthcare access,330
 Western Africa,Mixed or unknown,455
-Western Africa,Sickness inadequate healthcare access,330
 Western Africa,Vehicle accident,464
 Western Africa,Violence,275
 Western Asia,Accidental death,7
 Western Asia,Drowning,628
 Western Asia,Harsh environmental conditions,121
+Western Asia,Inadequate healthcare access,12
 Western Asia,Mixed or unknown,51
-Western Asia,Sickness inadequate healthcare access,12
 Western Asia,Vehicle accident,148
 Western Asia,Violence,295
