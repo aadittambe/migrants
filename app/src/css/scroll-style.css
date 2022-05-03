@@ -1,0 +1,102 @@
+/* scrollama */
+/* Credit: Adapted from https://github.com/calibro/scrollama-boilerplate */
+
+.scroll-graphic {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 50vh;
+    background: white;
+}
+
+.step {
+    padding: 2rem;
+    height: 50vh;
+}
+
+.scroll-graphic-tab {
+    /* padding-top: 15px; */
+    /* padding-bottom: 15px; */
+}
+
+
+.col-graphic {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    /* background-color: white; */
+}
+
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    min-width: 300px;
+    max-width: 500px;
+    color: #666666;
+}
+
+.info h4 {
+    margin: 0 0 5px;
+    color: #666666;
+}
+
+/* 
+span {
+  color: #8fd694;
+} */
+
+.legend {
+    text-align: left;
+    line-height: 20px;
+    color: #555;
+    max-width: 250px;
+    min-width: 225px;
+}
+
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
+ul {
+    line-height: 0.5;
+    margin-left: -20px;
+    margin-bottom: 0px;
+}
+
+li {
+    line-height: 1;
+}
+
+
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+    .scroll-graphic {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+    }
+
+    .step {
+        height: 100vh;
+    }
+
+    .col-graphic {
+        position: relative;
+    }
+
+    .scroll-text {
+        /* height: 100vh;
+    overflow: hidden; */
+    }
+}

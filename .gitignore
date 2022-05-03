@@ -1,7 +1,5 @@
 /app/node_modules
 
-/app/src
-
 /analysis/.ipynb_checkpoints
 
 /analysis/.DS_Store
