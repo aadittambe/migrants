@@ -139,7 +139,8 @@
 
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
-
+        <script src="https://pym.nprapps.org/pym.v1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <script src="sankey.js"></script>
         <script>
             var clientWidth = document.getElementById('chart').clientWidth;
@@ -342,6 +343,9 @@
                     sankey.relayout();
                     link.attr("d", path);
                 }
+            });
+            $(document).ready(function () {
+                var pymChild = new pym.Child({ id: "responsive-sankey" });
             });
         // Thank you to the following resources:
         // - https://bl.ocks.org/d3noob/06e72deea99e7b4859841f305f63ba85
