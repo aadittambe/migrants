@@ -134,6 +134,12 @@
         </div>
     </div>
     <script src="https://pym.nprapps.org/pym.v1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var pymChild = new pym.Child({ id: "responsive-routes" });
+        });
+    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script type="text/javascript">
         var clientWidth = document.getElementById('chart').clientWidth;
@@ -247,9 +253,6 @@
             d.total_number_of_dead_and_missing = +d.total_number_of_dead_and_missing;
             return d;
         }
-        $(document).ready(function () {
-            var pymChild = new pym.Child({ id: "responsive-routes" });
-        });
     // Thank you to the following sources:
     // - D3 Bar Chart Small Multiple - https://observablehq.com/@eliaslevy/d3-bar-chart
     // - Small multiple bar charts with tooltips - http://bl.ocks.org/officeofjane/7315455
